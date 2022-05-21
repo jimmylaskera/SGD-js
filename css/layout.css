@@ -1,0 +1,71 @@
+:root {
+	--menu-width: 18vw;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.vertical-nav {
+	width: var(--menu-width);
+}
+
+.horizontal-nav {
+	width: calc(100vw - var(--menu-width));
+	border-bottom: 1px solid #aaa;
+	position: absolute;
+	left: var(--menu-width);
+	padding: 5px;
+}
+
+.horizontal-nav p {
+	color: black;
+}
+
+.horizontal-nav a {
+	position: fixed;
+	top: 0.8vw;
+	right: 2vw;
+	font-size: 2em;
+	color: black;
+}
+
+#vertical-nav {
+	height: 100%;
+	position: absolute;
+	background-color: #444;
+}
+
+.vertical-nav a, p {
+	color: white;
+	display: block;
+	padding: 15px;
+	margin: 0px;
+	text-decoration: none;
+	overflow-y: auto;
+}
+
+.vertical-nav p {
+	border-bottom: 1px solid #aaa;
+}
+
+#title {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.subtitle {
+	font-size: 0.75em;
+	font-weight: bold;
+	color: #ccc;
+}
+
+.vertical-nav a:hover {
+	background-color: #aaa;
+}
+
+.vertical-nav a:active {
+	background-color: #888;
+	color: black;
+}
