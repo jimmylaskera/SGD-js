@@ -10,10 +10,17 @@ body {
 	right: 33%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	#login-form {
-		left: 0;
-		right: 0;
+		left: 15%;
+		right: 15%;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+	#login-form {
+		left: 25%;
+		right: 25%;
 	}
 }
 
