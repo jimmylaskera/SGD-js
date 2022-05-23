@@ -10,6 +10,13 @@ body {
 	right: 33%;
 }
 
+@media (max-width: 600px) {
+	#login-form {
+		left: 0;
+		right: 0;
+	}
+}
+
 h2 {
 	text-align: center;
 }
