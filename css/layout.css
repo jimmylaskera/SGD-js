@@ -70,13 +70,13 @@ body {
 	color: black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.horizontal-nav {
 		padding: 0px;
 	}
 
 	.horizontal-nav a {
-		top: 2vw;
+		top: 1.5vw;
 		right: 5vw;
 	}
 
@@ -92,5 +92,26 @@ body {
 	.subtitle {
 		font-size: 0.4em;
 		margin-left: -10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.horizontal-nav a {
+		top: 1vw;
+		right: 3vw;
+	}
+
+	.vertical-nav a {
+		font-size: 0.75em;
+		margin-left: -5px;
+	}
+
+	#title {
+		font-size: 1.25em;
+	}
+
+	.subtitle {
+		font-size: 0.6em;
+		margin-left: -5px;
 	}
 }
