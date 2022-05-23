@@ -69,3 +69,28 @@ body {
 	background-color: #888;
 	color: black;
 }
+
+@media (max-width: 600px) {
+	.horizontal-nav {
+		padding: 0px;
+	}
+
+	.horizontal-nav a {
+		top: 2vw;
+		right: 5vw;
+	}
+
+	.vertical-nav a {
+		font-size: 0.5em;
+		margin-left: -10px;
+	}
+
+	#title {
+		font-size: 1em;
+	}
+
+	.subtitle {
+		font-size: 0.4em;
+		margin-left: -10px;
+	}
+}
