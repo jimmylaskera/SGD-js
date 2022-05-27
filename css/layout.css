@@ -26,7 +26,7 @@ body {
 }
 
 .horizontal-nav a {
-	position: fixed;
+	position: absolute;
 	top: 0.8vw;
 	right: 2vw;
 	font-size: 2em;
@@ -138,6 +138,7 @@ body {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	border-collapse: collapse;
+	text-align: left;
 }
 
 .left-col {
@@ -198,6 +199,16 @@ body {
 
 	#content {
 		flex-flow: column wrap;
+		top: 45px;
+	}
+
+	#graph_expenses {
+		width: 80%;
+	}
+
+	#last_expenses {
+		width: 80%;
+		margin-left: 0px;
 	}
 }
 
@@ -219,5 +230,19 @@ body {
 	.subtitle {
 		font-size: 0.6em;
 		margin-left: -5px;
+	}
+
+	#content {
+		flex-flow: column wrap;
+		top: 50px;
+	}
+
+	#graph_expenses {
+		width: 80%;
+	}
+
+	#last_expenses {
+		width: 80%;
+		margin-left: 0px;
 	}
 }
