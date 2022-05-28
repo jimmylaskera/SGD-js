@@ -83,13 +83,13 @@ body {
 	padding-left: 20px;
 }
 
-#dept_budget {
+#dept_budget, #balance_list {
 	display: block;
 	background-color: white;
 	width: 80%;
 }
 
-#dept_budget p {
+#dept_budget p, #balance_list p {
 	border: 1px solid #ccc;
 	color: black;
 	font-weight: bold;
@@ -173,6 +173,31 @@ body {
 	background-color: white;
 }
 
+.list form {
+	padding: 10px;
+}
+
+.list table {
+	margin: 10px;
+	width: 97%;
+}
+
+#search_group, #page {
+	float: right;
+	margin-right: 10px;
+}
+
+#page a {
+	text-decoration: none;
+	color: black;
+}
+
+#page .active {
+	border: 1px solid black;
+	padding: 6px 10px;
+	text-decoration: none;
+}
+
 @media (max-width: 768px) {
 	.horizontal-nav {
 		padding: 0px;
@@ -201,14 +226,34 @@ body {
 		flex-flow: column wrap;
 		top: 45px;
 	}
+	
+	#dept_budget {
+		width: 76%;
+		font-size: 0.7em;
+	}
+	
+	#dept_budget table {
+		font-size: 0.8em;
+	}
 
 	#graph_expenses {
-		width: 80%;
+		width: 76%;
+		font-size: 0.7em;
+	}
+	
+	#graph_expenses table td {
+		width: 76%;
+		font-size: 0.5em;
 	}
 
 	#last_expenses {
-		width: 80%;
+		width: 76%;
 		margin-left: 0px;
+		font-size: 0.7em;
+	}
+	
+	#last_expenses table {
+		font-size: 0.8em;
 	}
 }
 
