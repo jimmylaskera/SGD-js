@@ -31,5 +31,42 @@
 			<p>Cotas</p>
 			<a href="#"><i class="fa-solid fa-circle-user"></i></a>
 		</div>
+
+		<div id="content">
+			<div class="list" id="balance_list">
+				<p>Distribuições</p>
+				<form>
+					<select name="number-of-results">
+						<option>10</option>
+						<option>30</option>
+						<option>50</option>
+					</select>
+					<label>resultados por página</label>
+
+					<div id="search_group">
+						<label for="search">Pesquisar:</label>
+						<input type="text" id="search" name="search">
+					</div>
+
+					<table cellspacing="0">
+						<tr>
+							<th>#</th>
+							<th>Data</th>
+							<th>Secretário</th>
+							<th>Valor Total</th>
+							<th>Descrição</th>
+							<th>Informações</th>
+							<th>Remover</th>
+						</tr>
+					</table>
+					<label>Mostrando 0 de 0 registros</label>
+					<div id="page">
+						<a href="#">Anterior</a>
+						<a href="#" class="active">1</a>
+						<a href="#">Próximo</a>
+					</div>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>

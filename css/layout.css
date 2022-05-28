@@ -173,6 +173,21 @@ body {
 	background-color: white;
 }
 
+.get_form input {
+	width: 98%;
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.get_form label {
+	font-weight: normal;
+}
+
+.get_form button {
+	padding: 5px;
+}
+
 .list form {
 	padding: 10px;
 }
@@ -196,6 +211,15 @@ body {
 	border: 1px solid black;
 	padding: 6px 10px;
 	text-decoration: none;
+}
+
+#form_title {
+	background-color: white!important;
+	text-align: center;
+	font-weight: normal!important;
+	border-left: none!important;
+	border-right: none!important;
+	border-top: none!important;
 }
 
 @media (max-width: 768px) {
