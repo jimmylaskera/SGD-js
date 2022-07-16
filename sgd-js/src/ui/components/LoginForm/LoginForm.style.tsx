@@ -6,7 +6,7 @@ export const LoginForm = styled('form') `
     flex-flow: column wrap;
     background-color: white;
 	padding: 20px;
-    max-width: 500px;
+    width: 500px;
     border: 1px solid black;
     margin: 50px auto 0px auto;
 `
@@ -43,6 +43,16 @@ export const ButtonSubmit = styled('button') `
     width: 60px;
     margin: 10px 5px 0px;
     background-color: #008cff;
+    color: white;
+    border: 2px solid #252525;
+`
+
+export const ButtonSignUp = styled('button') `
+    padding: 10px 5px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 46%;
+    background-color: #09ff00;
     color: white;
     border: 2px solid #252525;
 `

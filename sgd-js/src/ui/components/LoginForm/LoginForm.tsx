@@ -1,4 +1,6 @@
-import { LoginForm, Title, InputLabel, InputField, ButtonClear, ButtonSubmit } from "./LoginForm.style"
+import { Box } from "@mui/material"
+import Link from "next/link"
+import { LoginForm, Title, InputLabel, InputField, ButtonClear, ButtonSubmit, ButtonSignUp } from "./LoginForm.style"
 
 export default function Login () {
     return (
@@ -8,10 +10,14 @@ export default function Login () {
             <InputField type='text' name='username' placeholder='Usuário' required />
             <InputLabel htmlFor='password'>Senha</InputLabel>
             <InputField type='password' name='password' placeholder='Senha' required />
-            <div id="row">
+            <Box sx={{ width: '100%' }}>
                 <ButtonClear type='reset'>Limpar</ButtonClear>
                 <ButtonSubmit type='submit'>Entrar</ButtonSubmit>
-            </div>
+                <Link href='pages/register.tsx' passHref>
+                    <ButtonSignUp>Cadastrar-se</ButtonSignUp>
+                </Link>
+            </Box>
+                
             
         </LoginForm>
     )
