@@ -13,12 +13,10 @@ export default function Login () {
             <Box sx={{ width: '100%' }}>
                 <ButtonClear type='reset'>Limpar</ButtonClear>
                 <ButtonSubmit type='submit'>Entrar</ButtonSubmit>
-                <Link href='pages/register.tsx' passHref>
+                <Link href='/register' passHref>
                     <ButtonSignUp>Cadastrar-se</ButtonSignUp>
                 </Link>
             </Box>
-                
-            
         </LoginForm>
     )
 }
