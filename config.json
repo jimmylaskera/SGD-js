@@ -9,6 +9,7 @@
         "png": "image/png",
         "css": "text/css",
         "js": "text/javascript",
-        "json": "application/json"
+        "json": "application/json",
+        "svg": "image/svg+xml"
     }
 }
