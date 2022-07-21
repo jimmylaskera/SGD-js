@@ -14,47 +14,91 @@
 	</head>
 
 	<body>
-		<div class="vertical-nav" id="vertical-nav">
-			<p id="title">SGD</p>
-			<a href="home.html"><i class="fa-solid fa-house-chimney"></i> Tela Inicial</a>
+		<nav class="navbar navbar-expand-lg bg-light">
+			<div class="container-fluid">
+			  	<a class="navbar-brand" href="#"><img src="../ufrn-logo.svg" width="72" height="36"
+					class="d-inline-block align-text-top"></a>
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  	<li class="nav-item">
+						<button class="btn btn-primary mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#Menu"
+							aria-controls="Menu"><i class="fa fa-bars"></i></button>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active disabled" aria-current="page" href="#">Saldo</a>
+				  	</li>
+					
+				</ul>
+
+				<div class="dropdown">
+					<a class="nav-link d-flex me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="fa-solid fa-circle-user fa-2x"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+					</ul>
+				</div>	
+			</div>
+		</nav>
+
+		<div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="Menu" aria-labelledby="MenuLabel">
+			<div class="offcanvas-header bg-dark bg-outline-secondary text-light">
+				<h5 class="offcanvas-title" id="MenuLabel">SGD</h5>
+				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			
+			<div class="offcanvas-body bg-dark text-light">
+				<div class="vertical-nav" id="vertical-nav">
+					<a href="./home.html"><i class="fa-solid fa-house-chimney"></i> Tela Inicial</a>
+				</div>
+			</div>
 		</div>
 
-		<div class="horizontal-nav">
-			<p>Saldo</p>
-			<a href="#"><i class="fa-solid fa-circle-user"></i></a>
-		</div>
-
-		<div id="content">
-			<div class="list" id="balance_list">
-				<p>Saldo dos Professores (R$)</p>
+		<div id="content" class="container">
+			<div class="row">
+				<p class="h5 px-2 mb-0 bg-primary lh-lg text-light">Saldo dos Professores (R$)</p>
+			</div>
 				<form>
-					<select name="number-of-results">
-						<option>10</option>
-						<option>30</option>
-						<option>50</option>
-					</select>
-					<label>resultados por página</label>
-
-					<div id="search_group">
-						<label for="search">Pesquisar:</label>
-						<input type="text" id="search" name="search">
+					<div class="row pt-2 pb-2">
+						<select name="number-of-results" class="col-1">
+							<option value="10">10</option>
+							<option value="30">30</option>
+							<option value="50">50</option>
+						</select>
+						<label class="col-2 lh-lg">resultados por página</label>
+						<div class="col-5"></div>
+						<div class="col-4">
+							<label for="search" class="col-2">Pesquisar:</label>
+							<input type="text" id="search" name="search" class="col-7 pt-1 pb-2">
+							<button type="button" class="btn btn-primary search col-2">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</button>
+						</div>
 					</div>
-
-					<table cellspacing="0">
-						<tr>
-							<th>#</th>
-							<th>Nome</th>
-							<th>Pontuação das Comissões</th>
-							<th>Meses Habilitados</th>
-							<th>Pontuação Final</th>
-							<th>Saldo</th>
-						</tr>
+					
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col" class="text-center">#</th>
+								<th scope="col" class="text-center">Nome</th>
+								<th scope="col" class="text-center">Pontuação das Comissões</th>
+								<th scope="col" class="text-center">Meses Habilitados</th>
+								<th scope="col" class="text-center">Pontuação Final</th>
+								<th scope="col" class="text-center">Saldo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<td class="text-center" colspan="6">Nenhum registro</td>
+						</tbody>
 					</table>
-					<label>Mostrando 0 de 0 registros</label>
-					<div id="page">
-						<a href="#">Anterior</a>
-						<a href="#" class="active">1</a>
-						<a href="#">Próximo</a>
+
+					<div class="row">
+						<label class="col-3">Mostrando 0 de 0 registros</label>
+						<div class="col-7"></div>
+						<div class="col-2 row">
+							<a href="#" class="disabled text-center col-4">Anterior</a>
+							<a href="#" class="active d-block px-3 col-2">1</a>
+							<a href="#" class="disabled text-center col-4">Próximo</a>
+						</div>
 					</div>
 				</form>
 			</div>

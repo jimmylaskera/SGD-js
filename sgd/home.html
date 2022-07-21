@@ -21,8 +21,8 @@
 					class="d-inline-block align-text-top"></a>
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				  	<li class="nav-item">
-						<button class="btn btn-primary mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#MenuVariedades"
-							aria-controls="MenuVariedades"><i class="fa fa-bars"></i></button>
+						<button class="btn btn-primary mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#Menu"
+							aria-controls="Menu"><i class="fa fa-bars"></i></button>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link active disabled" aria-current="page" href="#">Tela Inicial</a>
@@ -41,9 +41,9 @@
 			</div>
 		</nav>
 
-		<div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="MenuVariedades" aria-labelledby="MenuVariedadesLabel">
+		<div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="Menu" aria-labelledby="MenuLabel">
 			<div class="offcanvas-header bg-dark bg-outline-secondary text-light">
-				<h5 class="offcanvas-title" id="MenuVariedadesLabel">SGD</h5>
+				<h5 class="offcanvas-title" id="MenuLabel">SGD</h5>
 				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			</div>
 			
@@ -54,66 +54,42 @@
 			</div>
 		</div>
 
-		<div id="content">
-			<div id="dept_budget">
-				<p>Orçamento do departamento</p>
-				<table>
+		<div id="content" class="container">
+			<table class="table">
+				<p class="h5 px-2 mb-0 bg-primary lh-lg text-light">Orçamento do departamento</p>
+				<thead>
 					<tr>
-						<th>Previsto</th>
-						<th>Recebido</th>
-						<th>Gastos</th>
-						<th>Saldo</th>
+						<th scope="col" class="text-center">Previsto</th>
+						<th scope="col" class="text-center">Recebido</th>
+						<th scope="col" class="text-center">Gastos</th>
+						<th scope="col" class="text-center">Saldo</th>
 					</tr>
+				</thead>
+				<tbody>
 					<tr>
-						<td>R$ 0,00</td>
-						<td>R$ 0,00</td>
-						<td>R$ 0,00</td>
-						<td>R$ 0,00</td>
+						<td class="text-center">R$ 0,00</td>
+						<td class="text-center">R$ 0,00</td>
+						<td class="text-center">R$ 0,00</td>
+						<td class="text-center">R$ 0,00</td>
 					</tr>
-				</table>
-			</div>
+				</tbody>
+			</table>
 
-			<div id="graph_expenses">
-				<p>Despesas</p>
-				<p id="ttitle">Total de Despesas do Mês</p>
-				<table cellspacing="0">
+			<table class="table">
+				<p class="h5 px-2 mb-0 bg-primary lh-lg text-light">Últimas Despesas</p>
+				<thead>
 					<tr>
-						<td class="left-col">R$ 1,00</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
+						<th scope="col" class="text-center">#</th>
+						<th scope="col" class="text-center">Rubrica</th>
+						<th scope="col" class="text-center">Valor</th>
+						<th scope="col" class="text-center">Status</th>
+						<th scope="col" class="text-center">Editar</th>
 					</tr>
-					<tr>
-						<td class="left-col">R$ 0,80</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
-					</tr>
-					<tr>
-						<td class="left-col">R$ 0,60</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
-					</tr>
-					<tr>
-						<td class="left-col">R$ 0,40</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
-					</tr>
-					<tr>
-						<td class="left-col">R$ 0,20</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
-					</tr>
-					<tr>
-						<td class="left-col">R$ 0,00</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
-					</tr>
-					<tr>
-						<td id="blank-col"> </td><td>Janeiro</td><td>Fevereiro</td><td>Março</td><td>Abril</td><td>Maio</td><td>Junho</td>
-					</tr>
-				</table>
-			</div>
-
-			<div id="last_expenses">
-				<p>Últimas Despesas</p>
-				<table cellspacing="0">
-					<tr>
-						<th>#</th>
-						<th>Rubrica</th>
-						<th>Valor</th>
-						<th>Status</th>
-						<th>Editar</th>
-					</tr>
-				</table>
-				<p>Nenhuma despesa a declarar</p>
-			</div>
+				</thead>
+				<tbody>
+					<td class="text-center" colspan="5">Nenhuma despesa a declarar</td>
+				</tbody>
+			</table>
 		</div>
 
 		<script> createMenu(); </script>

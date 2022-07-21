@@ -9,12 +9,11 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 		rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 		crossorigin="anonymous">
-		<script type="text/javascript" src="./js/auth.js"></script>
 	</head>
 	
 	<body class="bg-secondary">
 		<div id="login-form" class="container">
-			<form action="sgd/home.html" class="col-auto mt-5 p-3" name="loginform">
+			<form class="col-auto mt-5 p-3" name="loginform">
 				<div class="row m-2">
 					<img src="ufrn-logo.svg" class="img-fluid col-4">
 					<p class="text-center col-8 h5">Formulário de Autenticação</p>
@@ -26,7 +25,7 @@
 
 				<div class="row g-1">
 					<button class="btn btn-danger col-2" type="reset">Limpar</button>
-					<button class="btn btn-primary col-2" type="button" onclick="loginUser()">Entrar</button>
+					<button class="btn btn-primary col-2" type="button" id="submit">Entrar</button>
 					<div class="col-4"></div>
 					
 					<a href="./register.html"  class="col-4">
@@ -35,6 +34,21 @@
 				</div>
 			</form>
 		</div>
+
+		<script> document.getElementById("submit").addEventListener("click", function(event){
+			let user = document.forms.loginform.login.value;
+
+			if(user === "professor") {
+				sessionStorage.setItem("user", 1);
+				window.location.href = "./sgd/home.html";
+			} else if (user === "chefia") {
+				sessionStorage.setItem("user", 2);
+				window.location.href = "./sgd/home.html";
+			} else if (user === "secretario") {
+				sessionStorage.setItem("user", 3);
+				window.location.href = "./sgd/home.html";
+			} else alert("Usuário inválido");
+		}); </script>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

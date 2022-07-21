@@ -14,14 +14,43 @@
 	</head>
 
 	<body>
-		<div class="vertical-nav" id="vertical-nav">
-			<p id="title">SGD</p>
-			<a href="home.html"><i class="fa-solid fa-house-chimney"></i> Tela Inicial</a>
-		</div>
+		<nav class="navbar navbar-expand-lg bg-light">
+			<div class="container-fluid">
+			  	<a class="navbar-brand" href="#"><img src="../ufrn-logo.svg" width="72" height="36"
+					class="d-inline-block align-text-top"></a>
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				  	<li class="nav-item">
+						<button class="btn btn-primary mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#Menu"
+							aria-controls="Menu"><i class="fa fa-bars"></i></button>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active disabled" aria-current="page" href="#">Receitas</a>
+				  	</li>
+					
+				</ul>
 
-		<div class="horizontal-nav">
-			<p>Receitas</p>
-			<a href="#"><i class="fa-solid fa-circle-user"></i></a>
+				<div class="dropdown">
+					<a class="nav-link d-flex me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="fa-solid fa-circle-user fa-2x"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+					</ul>
+				</div>	
+			</div>
+		</nav>
+
+		<div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="Menu" aria-labelledby="MenuLabel">
+			<div class="offcanvas-header bg-dark bg-outline-secondary text-light">
+				<h5 class="offcanvas-title" id="MenuLabel">SGD</h5>
+				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			
+			<div class="offcanvas-body bg-dark text-light">
+				<div class="vertical-nav" id="vertical-nav">
+					<a href="./home.html"><i class="fa-solid fa-house-chimney"></i> Tela Inicial</a>
+				</div>
+			</div>
 		</div>
 
 		<script> createMenu(); </script>
