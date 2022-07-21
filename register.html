@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Entrar</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+		rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+		crossorigin="anonymous">
+	</head>
+	
+	<body class="bg-secondary">
+		<div id="register-form" class="container">
+			<form class="col-auto mt-5 p-3">
+				<div class="row m-2">
+                    <p class="text-center col-12 h5">Cadastro de Usuário</p>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md">
+                            <label for="username" class="col-6 mb-2">Nome de Usuário</label>
+                            <input class="form-control p-2 mb-2" type="text" id="username" name="username">
+                        </div>
+                        <div class="col-md">
+                            <label for="password" class="col-6 mb-2">Senha</label>
+                            <input class="form-control p-2 mb-2" type="password" id="password" name="password">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <label for="fname">Nome</label>
+                            <input class="form-control p-2 mb-2" type="text" name="fname" placeholder="Ex: José">
+                        </div>
+                        <div class="col-4">
+                            <label for="lname">Sobrenome</label>
+                            <input class="form-control p-2 mb-2" type="text" name="lname" placeholder="Ex: da Silva">
+                        </div>
+                        <div class="col-4">
+                            <label for="email">Email</label>
+                            <input class="form-control p-2 mb-2" type="email" name="email" placeholder="Ex: josedasilva@email.com">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <label for="cargo" class="col-2 text-end mt-2">Cargo</label>
+                        <select class="col-4" id="cargo" name="cargo">
+                            <option value="-1" selected disabled>Escolha...</option>
+                            <option value="1">Professor</option>
+                            <option value="2">Chefia</option>
+                            <option value="3">Secretário</option>
+                        </select>
+                        <div class="col-2"></div>
+                        <button type="button" class="btn btn-success col-2">Cadastrar</button>
+                        <div class="col-2"></div>
+                    </div>
+                </div>                
+			</form>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	</body>
+</html>
